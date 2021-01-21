@@ -21,7 +21,7 @@
             </div>
             <div class="col form-group">
                 <label>Photo du jeu :</label>
-                <input type="file" class="form-control-file">
+                <input type="file" name="gamepic" class="form-control-file">
             </div>
             <div class="col form-group">
                 <label>Prix du jeu (en euros) :</label><br>
