@@ -10,11 +10,19 @@
         <form class="form-inline">
             @if(!auth()->check())
                 <ul>
+                    <form>
+                        <input type="text" class="search_bar"> 
+                        <button type='submit' class="button_search_bar"><i></i></button>
+                    </form>
+                    
+
                     <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Inscription</a></button>
 
                     <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Connexion</a></button>
 
+                    
                 </ul>
+
             @else
                 <ul>
                     <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Profil</a></button>
