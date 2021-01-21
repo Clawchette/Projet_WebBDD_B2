@@ -10,26 +10,26 @@
         <form class="form-inline">
             @if(!auth()->check())
                 <ul>
-                    <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Inscription</a></button>
+                    <a href="" class="btn btn-info">Inscription</a>
 
-                    <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Connexion</a></button>
+                    <a href="" class="btn btn-info">Connexion</a>
 
                 </ul>
             @else
                 <ul>
-                    <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Profil</a></button>
+                    <a href="" class="btn btn-info">Profil</a>
 
                     <!--@if(admin)     Si l'utilisateur est un admin...
-                        <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Dashboard</a></button>
+                        <a href="" class="btn btn-info">Dashboard</a>
 
-                        <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Membres</a></button>
+                        <a href="" class="btn btn-info">Membres</a>
 
-                        <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Jeux</a></button>
+                        <a href="/adminGames" class="btn btn-info">Jeux</a>
                         
                     @endif-->
-                    <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Panier</a></button>
+                    <a href="" class="btn btn-info">Panier</a>
 
-                    <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Sign out</a></button>
+                    <a href="" class="btn btn-info">Sign out</a>
 
                 </ul>
             @endif
