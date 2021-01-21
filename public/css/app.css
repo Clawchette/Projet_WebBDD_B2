@@ -5,20 +5,15 @@ body{
     min-height: 2000px;
 }
 
+.contenu{
+    padding-left: 10px;
+}
+
 .no-link-style{
     text-decoration: none;
 }
 .no-link-style:hover{
     text-decoration: none;
-}
-
-.no-link-style-white{
-    text-decoration: none;
-    color:white;
-}
-.no-link-style-white:hover{
-    text-decoration: none;
-    color:white;
 }
 
 footer{
