@@ -1,12 +1,50 @@
+body{
+    position: relative;
+    min-height: 2000px;
+}
+
+.no-link-style{
+    text-decoration: none;
+}
+.no-link-style:hover{
+    text-decoration: none;
+}
+
+.no-link-style-white{
+    text-decoration: none;
+    color:white;
+}
+.no-link-style-white:hover{
+    text-decoration: none;
+    color:white;
+}
+
+footer{
+    position:absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
 .jeu_photo{
     height: 300px;
     width: 20%;
     border: solid 1px black;
     position: relative;
     display: inline-flex;
+    margin: 2%;
 }
 .principale{
-    height: 2000px;
+    height: 100%;
     width: 100%;
     position: absolute;
+}
+.search_bar{
+    width: 400px;
+    height: 30px;
+    border-radius: 25px;
+}
+.button_search_bar{
+    width: 10px;
+    height: 20px;
 }

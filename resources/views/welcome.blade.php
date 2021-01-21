@@ -10,8 +10,6 @@
         <div class="jeu_photo"></div>
         <div class="jeu_photo"></div>
         <div class="jeu_photo"></div>
-        <div class="jeu_photo"></div>
-        <div class="jeu_photo"></div>
     </div>
 
 @endsection
