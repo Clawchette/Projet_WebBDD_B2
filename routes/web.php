@@ -17,8 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
-=======
 Route::get('/adminGames', 'App\Http\Controllers\AdminController@adminGames');
 Route::post('/adminGames', 'App\Http\Controllers\AdminController@formulaire');
->>>>>>> 413cb0a175b9e4b6c472e83275bf2545ab3597e6

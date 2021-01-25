@@ -10,11 +10,18 @@
         <form class="form-inline">
             <?php if(!auth()->check()): ?>
                 <ul>
+                    <form>
+                        <input type="text" class="search_bar"> 
+                        <button type='submit' class="button_search_bar"><i></i></button>
+                    </form>
+
                     <a href="" class="btn btn-info">Inscription</a>
 
                     <a href="" class="btn btn-info">Connexion</a>
 
+                    
                 </ul>
+
             <?php else: ?>
                 <ul>
                     <a href="" class="btn btn-info">Profil</a>
