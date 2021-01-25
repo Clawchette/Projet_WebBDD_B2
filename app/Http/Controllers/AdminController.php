@@ -10,7 +10,15 @@ class AdminController extends Controller
         return view('Admin/adminGames');
     }
 
-    public function formulaire(){
+    public  function adminUsers(){
+        return view('Admin/adminUsers');
+    }
+
+    public  function adminDashboard(){
+        return view('Admin/adminDashboard');
+    }
+
+    public function formulaireGames(){
 
         request()->validate([
             'gamename' =>['required'],

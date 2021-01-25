@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/adminGames', 'App\Http\Controllers\AdminController@adminGames');
-Route::post('/adminGames', 'App\Http\Controllers\AdminController@formulaire');
+Route::post('/adminGames', 'App\Http\Controllers\AdminController@formulaireGames');
