@@ -4,19 +4,19 @@
 
 <h1>Inscription</h1><br>
 
-<form class="" action="/inscription" method="post">
+<form action="/inscription" method="post">
     <div class="row">
-        <div class="col-2 form-group">
+        <div class="col-3 form-group">
             <label>Prénom :</label><br>
-            <input type="string" name="userfirstname" placeholder="Prénom...">
+            <input type="string" name="userfirstname" placeholder="Prénom..." style="min-width: 250px;">
         </div>
-        <div class="col-2 form-group">
+        <div class="col-3 form-group">
             <label>Nom :</label><br>
-            <input type="string" name="userlastname" placeholder="Nom...">
+            <input type="string" name="userlastname" placeholder="Nom..." style="min-width: 250px;">
         </div>
         <div class="col form-group">
             <label>Adresse Email :</label><br>
-            <input type="string" name="useremail" placeholder="Adresse email..." cols="50" style="min-width: 350px;">
+            <input type="string" name="useremail" placeholder="Adresse email..." style="min-width: 350px;">
         </div>
     </div><br>
 
@@ -34,11 +34,11 @@
     <div class="row">
         <div class="col-3 form-group">
             <label>Date de naissance :</label><br>
-            <input type="date" name="userbirthday">
+            <input type="date" name="userbirthday" style="min-width: 250px;">
         </div>
         <div class="col form-group">
             <label>Solde :</label><br>
-            <input type="number" name="usermoney" placeholder="Solde...">
+            <input type="number" name="usermoney" placeholder="Solde..." style="min-width: 250px;">
         </div>
     </div>
 
