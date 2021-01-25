@@ -6,8 +6,8 @@
 <br>
 
 @if($_GET==NULL)
-    <button type="button" class="btn btn-info" ><a href="/adminGames?page=addgame" class="no-link-style-white">Ajouter un jeu</a></button> 
-    <!-- liste des jeux déjà sur le site -->
+    <a href="/adminGames?page=addgame" class="btn btn-info">Ajouter un jeu</a>
+    <!-- liste des jeux déjà sur le site qui seront des boutons pour les modifier -->
 @elseif($_GET["page"]=="addgame")
     <h3 style="padding-left: 20px;">Ajouter un jeu</h3>
     <br>

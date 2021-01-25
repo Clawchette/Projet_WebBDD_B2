@@ -36,7 +36,7 @@
                     @endif-->
                     <a href="" class="btn btn-info">Panier</a>
 
-                    <a href="" class="btn btn-info">Sign out</a>
+                    <a href="" class="btn btn-info">Déconnexion</a>
 
                 </ul>
             @endif
