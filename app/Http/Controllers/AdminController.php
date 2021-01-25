@@ -40,4 +40,25 @@ class AdminController extends Controller
         ]);
 
     }
+
+    public function formulaireUsers(){
+
+        request()->validate([
+            'userfirstname' =>['required'],
+            'userlastname' =>['required'],
+            'useremail' => ['required'],
+            'userbirthday'=>['required'],
+            'usermoney' =>['required'],
+
+        ]);
+
+        $user = User::create([ 
+            'firstname' => request('userfirstname'),
+            'lastname' => request('userlastname'), 
+            'email' => request('useremail'),
+            'birthday' => request('userbirthday'),
+            'money' => request('usermoney'), 
+        ]);
+
+    }
 }
