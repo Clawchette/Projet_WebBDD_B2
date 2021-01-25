@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col form-group" >
                 <label>Nom du jeu :</label><br>
-                <input type="string" name="gamename" placeholder="Nom du jeu..." rows="3">
+                <input type="string" name="gamename" placeholder="Nom du jeu...">
             </div>
             <div class="col form-group">
                 <label>Photo du jeu :</label>
@@ -25,24 +25,24 @@
             </div>
             <div class="col form-group">
                 <label>Prix du jeu (en euros) :</label><br>
-                <input type="number" name="gameprice" placeholder="Prix du jeu (en €)..." rows="3">
+                <input type="number" name="gameprice" placeholder="Prix du jeu (en €)...">
             </div>
         </div><br>
 
         <div>
             <label>Description du jeu :</label><br>
-            <textarea name="gamedesc" style="color:grey;" cols="140" rows="3">Description du jeu...</textarea>
+            <textarea name="gamedesc" style="color:grey;" cols="140">Description du jeu...</textarea>
         </div><br>
 
         <div class="row">
             <div class="col-4 form-group">
                 <label>Nombre de jeux disponibles :</label><br>
-                <input type="number" name="gamestock" placeholder="Quantité en stock..." rows="3">
+                <input type="number" name="gamestock" placeholder="Quantité en stock...">
             </div>
 
             <div class="col-4 form-group">
                 <label>Code d'activation du jeu :</label><br>
-                <input type="number" name="gamecode" placeholder="Code du jeu..." rows="3">
+                <input type="number" name="gamecode" placeholder="Code du jeu...">
             </div>
         </div><br>
 
