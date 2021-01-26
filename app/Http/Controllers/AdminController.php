@@ -22,7 +22,7 @@ class AdminController extends Controller
 
         request()->validate([
             'gamename' =>['required'],
-            'gamepic' =>['required'],
+            'gamepric' =>['required'],
             'gameprice' => ['required'],
             'gamedesc'=>['required'],
             'gamestock' =>['required'],

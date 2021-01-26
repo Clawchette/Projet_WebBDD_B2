@@ -38,3 +38,6 @@ Route::get('/inscription', 'App\Http\Controllers\LogInController@inscription');
 Route::get('/panier', 'App\Http\Controllers\UsersController@userPanier');
 //Profil de l'utilisateur
 Route::get('/profil', 'App\Http\Controllers\UsersController@userProfile');
+
+//route Games
+Route::get('/games', 'App\Http\Controllers\GamesController@index');
