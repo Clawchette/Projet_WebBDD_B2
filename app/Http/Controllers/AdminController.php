@@ -48,7 +48,7 @@ class AdminController extends Controller
             'userlastname' =>['required'],
             'useremail' => ['required'],
             'userbirthday'=>['required'],
-            'usermoney' =>['required'],
+            'useradmin' =>['required'],
 
         ]);
 
@@ -57,7 +57,7 @@ class AdminController extends Controller
             'lastname' => request('userlastname'), 
             'email' => request('useremail'),
             'birthday' => request('userbirthday'),
-            'money' => request('usermoney'), 
+            'admin' => request('useradmin'), 
         ]);
 
     }
