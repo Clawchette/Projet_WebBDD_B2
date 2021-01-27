@@ -27,6 +27,7 @@ class AdminController extends Controller
             'gamedesc'=>['required'],
             'gamestock' =>['required'],
             'gamecode' =>['required'],
+            'gameplateform' =>['required'],
 
         ]);
 
@@ -37,6 +38,7 @@ class AdminController extends Controller
             'stock' => request('gamestock'),
             'price' => request('gameprice'), 
             'activation_code' => request('gamecode'),
+            'plateform' => request('gameplateform'),
         ]);
 
     }

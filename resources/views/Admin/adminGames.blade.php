@@ -44,7 +44,17 @@
                 <label>Code d'activation du jeu :</label><br>
                 <input type="number" name="gamecode" placeholder="Code du jeu...">
             </div>
+            <div class="col-4 form-group">
+                <label>Plateforme du jeu :</label><br>
+                <select name="gameplateform" id="pet-select">
+                    <option value="PC">PC</option>
+                    <option value="PS">PlayStation</option>
+                    <option value="Xbox">Xbox</option>
+                </select>
+            </div>
         </div><br>
+
+        <br>
 
         <div>
             <input type="submit" value="Valider" class="btn btn-outline-success">

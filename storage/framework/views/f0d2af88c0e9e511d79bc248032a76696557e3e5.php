@@ -4,7 +4,7 @@
 
 <h1>Inscription</h1><br>
 
-<form class="" action="/inscription" method="post">
+<form action="/inscription" method="post">
     <div class="row">
         <div class="col-3 form-group">
             <label>Prénom :</label><br>
@@ -16,7 +16,7 @@
         </div>
         <div class="col form-group">
             <label>Adresse Email :</label><br>
-            <input type="string" name="useremail" placeholder="Adresse email..." cols="50" style="min-width: 350px;">
+            <input type="string" name="useremail" placeholder="Adresse email..." style="min-width: 350px;">
         </div>
     </div><br>
 
