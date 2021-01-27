@@ -41,3 +41,6 @@ Route::get('/profil', 'App\Http\Controllers\UsersController@userProfile');
 
 //route Games
 Route::get('/games', 'App\Http\Controllers\GamesController@index');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
