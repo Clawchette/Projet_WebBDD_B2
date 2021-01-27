@@ -32,7 +32,7 @@
 
         <div>
             <label>Description du jeu :</label><br>
-            <textarea name="gamedesc" style="color:grey;" cols="140">Description du jeu...</textarea>
+            <textarea name="gamedesc" style="color:grey;" cols="140" placeholder="Description du jeu..."></textarea>
         </div><br>
 
         <div class="row">
@@ -47,7 +47,7 @@
             </div>
             <div class="col-4 form-group">
                 <label>Plateforme du jeu :</label><br>
-                <select name="pets" id="pet-select">
+                <select name="gameplateform" id="pet-select">
                     <option value="PC">PC</option>
                     <option value="PS">PlayStation</option>
                     <option value="Xbox">Xbox</option>

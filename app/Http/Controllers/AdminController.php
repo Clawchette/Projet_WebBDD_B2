@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Games;
+use App\Models\Game;
 use App\Models\User;
 
 class AdminController extends Controller
@@ -24,7 +24,7 @@ class AdminController extends Controller
 
         request()->validate([
             'gamename' =>['required'],
-            'gamepric' =>['required'],
+            'gamepic' =>['required'],
             'gameprice' => ['required'],
             'gamedesc'=>['required'],
             'gamestock' =>['required'],
@@ -34,15 +34,16 @@ class AdminController extends Controller
         ]);
 
         $game = Game::create([ 
-            'Name' => request('gamename'),
+            'name' => request('gamename'),
             'description' => request('gamedesc'), 
-            'photos' => request('gamepic'),
+            'photo' => cloudinary()->upload(request()->file('gamepic')->getRealPath())->getSecurePath(),
             'stock' => request('gamestock'),
             'price' => request('gameprice'), 
             'activation_code' => request('gamecode'),
             'plateform' => request('gameplateform'),
         ]);
 
+        return view('Admin/adminGames');
     }
 
     public function formulaireUsers(){

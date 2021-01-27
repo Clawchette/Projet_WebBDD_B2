@@ -31,7 +31,7 @@
 
         <div>
             <label>Description du jeu :</label><br>
-            <textarea name="gamedesc" style="color:grey;" cols="140">Description du jeu...</textarea>
+            <textarea name="gamedesc" style="color:grey;" cols="140" placeholder="Description du jeu..."></textarea>
         </div><br>
 
         <div class="row">
