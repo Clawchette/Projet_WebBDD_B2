@@ -6,10 +6,7 @@
 
 
     <div class="principale"> 
-
-        <?php $__currentLoopData = $games; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $game): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <a href="/game/<?php echo e($game->id); ?>"><div class='jeu_photo'> <?php echo e($game->name); ?> <img src=""></div></a>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+Coucou c'est la vue welcome ! Bienvenue en Français !
 
     </div>
 
