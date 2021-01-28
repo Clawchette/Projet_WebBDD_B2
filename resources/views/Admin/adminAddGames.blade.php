@@ -52,8 +52,9 @@
     <br>
 
     <div>
-        <input type="hidden" name="id" value="{{$_GET['id']}}">
         <input type="submit" value="Valider" class="btn btn-outline-success">
     </div><br><br>
 </form>
+
+<a href="/adminGames" class="btn btn-outline-info">Retour</a>
 @endsection

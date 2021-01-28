@@ -17,6 +17,7 @@
                 <a href="/adminModGames?id={{$game->id}}" class="btn btn-success" style="margin-bottom:20px;">Modifier</a>
 
                 <form action="/adminGames" method="post">
+                    {{csrf_field()}}
                     <input type="hidden" name="id" value="{{$game->id}}">
                     <input type="submit" value="Supprimer" class="btn btn-danger">
                 </form>
