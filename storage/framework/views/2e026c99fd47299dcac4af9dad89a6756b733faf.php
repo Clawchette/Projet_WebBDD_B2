@@ -15,9 +15,9 @@
                         <button type='submit' class="button_search_bar"><i></i></button>
                     </form>
 
-                    <a href="" class="btn btn-info">Inscription</a>
+                    <a href="<?php echo e(url('/register')); ?>" class="btn btn-info">Inscription</a>
 
-                    <a href="" class="btn btn-info">Connexion</a>
+                    <a href="<?php echo e(url('/login')); ?>" class="btn btn-info">Connexion</a>
 
                     
                 </ul>
@@ -26,17 +26,10 @@
                 <ul>
                     <a href="" class="btn btn-info">Profil</a>
 
-                    <!--<?php if(admin): ?>     Si l'utilisateur est un admin...
-                        <a href="" class="btn btn-info">Dashboard</a>
+                   
+                    <a href="<?php echo e(url('/panier')); ?>" class="btn btn-info">Panier</a>
 
-                        <a href="" class="btn btn-info">Membres</a>
-
-                        <a href="/adminGames" class="btn btn-info">Jeux</a>
-                        
-                    <?php endif; ?>-->
-                    <a href="" class="btn btn-info">Panier</a>
-
-                    <a href="" class="btn btn-info">Déconnexion</a>
+                    <a href="<?php echo e(url('/logout')); ?>" class="btn btn-info">Déconnexion</a>
 
                 </ul>
             <?php endif; ?>

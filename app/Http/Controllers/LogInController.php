@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 class LogInController extends Controller
 {
+    
+
     public  function connexion(){
         return view('LogIn/connexion');
     }
@@ -13,4 +15,5 @@ class LogInController extends Controller
     public  function inscription(){
         return view('LogIn/inscription');
     }
+
 }

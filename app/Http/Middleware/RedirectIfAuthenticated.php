@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 class RedirectIfAuthenticated
 {
+    protected $redirectTo = '/';
+
     /**
      * Handle an incoming request.
      *

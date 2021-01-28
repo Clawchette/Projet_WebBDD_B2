@@ -15,9 +15,9 @@
                         <button type='submit' class="button_search_bar"><i></i></button>
                     </form>
 
-                    <a href="" class="btn btn-info">Inscription</a>
+                    <a href="{{ url('/register') }}" class="btn btn-info">Inscription</a>
 
-                    <a href="" class="btn btn-info">Connexion</a>
+                    <a href="{{ url('/login') }}" class="btn btn-info">Connexion</a>
 
                     
                 </ul>
@@ -26,17 +26,17 @@
                 <ul>
                     <a href="" class="btn btn-info">Profil</a>
 
-                    <!--@if(admin)     Si l'utilisateur est un admin...
+                   {{-- <!--@if(admin)    TODO: faire le tag admin et le management
                         <a href="" class="btn btn-info">Dashboard</a>
 
                         <a href="" class="btn btn-info">Membres</a>
 
                         <a href="/adminGames" class="btn btn-info">Jeux</a>
                         
-                    @endif-->
-                    <a href="" class="btn btn-info">Panier</a>
+                    @endif--> --}}
+                    <a href="{{ url('/panier') }}" class="btn btn-info">Panier</a>
 
-                    <a href="" class="btn btn-info">Déconnexion</a>
+                    <a href="{{ url('/logout') }}" class="btn btn-info">Déconnexion</a>
 
                 </ul>
             @endif
