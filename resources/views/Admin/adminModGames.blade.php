@@ -7,7 +7,7 @@
 <h3 style="padding-left: 20px;">Modifier un jeu</h3><br>
 
 <!--cherche le jeu selon l'ID dans le GET
-<?php $game = DB::table('games')->find($_GET["id"]);?>
+<?php $game = DB::table('games')->find($_GET['id']);?>
 -->
 
 <form action="/adminModGames" method="post" enctype="multipart/form-data">
@@ -73,6 +73,7 @@
     <br>
 
     <div>
+        <input type="hidden" name="id" value="{{$game->id}}">
         <input type="submit" value="Valider" class="btn btn-outline-success">
     </div><br><br>
 </form>

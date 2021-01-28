@@ -35,7 +35,7 @@ class AdminController extends Controller
 
         ]);
 
-        $game = Game::create([ 
+        Game::create([ 
             'name' => request('gamename'),
             'description' => request('gamedesc'), 
             'photo' => cloudinary()->upload(request()->file('gamepic')->getRealPath())->getSecurePath(),
@@ -45,37 +45,61 @@ class AdminController extends Controller
             'plateform' => request('gameplateform'),
         ]);
 
-        return view('Admin/adminGames');
+        $games = Game::all();
+        return view('Admin/adminGames', [
+            'games' => $games,
+        ] );
     }
 
     public function formulaireModGames(){
 
-        request()->validate([
-            'gamename' =>['required'],
-            'gamepic' =>['required'],
-            'gameprice' => ['required'],
-            'gamedesc'=>['required'],
-            'gamestock' =>['required'],
-            'gamecode' =>['required'],
-            'gameplateform' =>['required'],
+        $game = DB::table('games')->find(request('id'));
 
-        ]);
+        if($game->name != request('gamename')){
+            DB::table('games')->where('id', request('id'))->update([
+                'name' => request('gamename'),
+            ]);
+        }
+        if($game->description != request('gamedesc')){
+            DB::table('games')->where('id', request('id'))->update([
+                'description' => request('gamedesc'),
+            ]);
+        }
+        if($game->plateform != request('gameplateform')){
+            DB::table('games')->where('id', request('id'))->update([
+                'plateform' => request('gameplateform'),
+            ]);
+        }
+        if($game->stock != request('gamestock')){
+            DB::table('games')->where('id', request('id'))->update([
+                'stock' => request('gamestock'),
+            ]);
+        }
+        if($game->price != request('gameprice')){
+            DB::table('games')->where('id', request('id'))->update([
+                'price' => request('gameprice'),
+            ]);
+        }
+        if($game->activation_code != request('gamecode')){
+            DB::table('games')->where('id', request('id'))->update([
+                'activation_code' => request('gamecode'),
+            ]);
+        }
 
-        $update = DB::table('games')->where('id', request('id'))->update([
-            'name' => request('gamename'),
-            'description' => request('gamedesc'),
-            'photo' => cloudinary()->upload(request()->file('gamepic')->getRealPath())->getSecurePath(),
-            'plateform' => request('gameplateform'),
-            'stock' => request('gamestock'),
-            'price' => request('gameprice'),
-            'activation_code' => request('gamecode'),
-        ]);
+        if(request('gamepic') != NULL){
+            DB::table('games')->where('id', request('id'))->update([
+                'photo' => cloudinary()->upload(request()->file('gamepic')->getRealPath())->getSecurePath(),
+            ]);
+        }
 
-        return view('Admin/adminGames');
+        $games = Game::all();
+        return view('Admin/adminGames', [
+            'games' => $games,
+        ] );
     }
 
     public function DelGames(){
-        $delete = DB::table('games')->where('id', request('id'))->delete();
+        DB::table('games')->where('id', request('id'))->delete();
         return view('Admin/adminGames');
     }
 

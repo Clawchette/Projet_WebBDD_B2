@@ -17,6 +17,8 @@
                 <a href="/adminModGames?id=<?php echo e($game->id); ?>" class="btn btn-success" style="margin-bottom:20px;">Modifier</a>
 
                 <form action="/adminGames" method="post">
+                    <?php echo e(csrf_field()); ?>
+
                     <input type="hidden" name="id" value="<?php echo e($game->id); ?>">
                     <input type="submit" value="Supprimer" class="btn btn-danger">
                 </form>
