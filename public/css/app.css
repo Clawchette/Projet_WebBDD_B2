@@ -33,7 +33,6 @@ footer{
     text-align: center;
     width: 100%;
 }
-
 .jeu_photo{
     height: 300px;
     width: 20%;
@@ -41,6 +40,8 @@ footer{
     position: relative;
     display: inline-flex;
     margin: 2%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .principale{
     height: 100%;
@@ -56,4 +57,17 @@ footer{
     width: 10px;
     height: 20px;
 }
+.super{
+    width: 30%;
+    height: 30%;
+    position: relative;
+    display: inline-flex;
+    border: solid black 1px;
+}
+.button_buy{
+    width: 500px;
+    height: 50px;
+}
+
+
 

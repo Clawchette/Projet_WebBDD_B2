@@ -40,4 +40,9 @@ Route::get('/panier', 'App\Http\Controllers\UsersController@userPanier');
 Route::get('/profil', 'App\Http\Controllers\UsersController@userProfile');
 
 //route Games
-Route::get('/games', 'App\Http\Controllers\GamesController@index');
+Route::get('games', 'App\Http\Controllers\GamesController@index');
+
+
+Route::get('/game/{game}' , 'App\Http\Controllers\GamesController@show');
+
+

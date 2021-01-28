@@ -31,7 +31,7 @@ class AdminController extends Controller
         ]);
 
         $game = Game::create([ 
-            'Name' => request('gamename'),
+            'name' => request('gamename'),
             'description' => request('gamedesc'), 
             'photos' => request('gamepic'),
             'stock' => request('gamestock'),

@@ -13,6 +13,13 @@ class GamesController extends Controller
         $games = Game::all();
         return view('welcome', [
             'games' => $games,
-        ] );
+        ]);
     }
+
+    public function show(Game $game){
+        return view('produit' , [
+            'game' => $game,
+        ]);
+    }
+
 }
