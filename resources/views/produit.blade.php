@@ -9,6 +9,7 @@
             <div class="col"><img class="img-fluid" src="{{$game->photo}}"></div>
             <div class="col">{{$game->description}}</div>
             <div class="col-12">Stock : {{$game->stock}}</div>
+            <div class="col-12">Plateforme : {{$game->plateform}}</div>
         </div>
         <a href="/send-email/{{$game->id}}">
             <button class="button_buy">

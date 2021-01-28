@@ -30,7 +30,7 @@ class GamesController extends Controller
     {
         $user = Auth::user();
         // envoie un email a l'acheteur quand il appuie sur le bouton
-        $message = 'Vous allez recevoir un email avec votre clé.';
+        $message = 'clé d\'activation : ';
         try {
             Mail::to($user->email)->send(new SignUp($game));
         } catch (Exception $e) {
