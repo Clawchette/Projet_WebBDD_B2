@@ -56,8 +56,9 @@ Route::get('/profil', 'App\Http\Controllers\UsersController@userProfile');
 //route Games
 Route::get('games', 'App\Http\Controllers\GamesController@index');
 
-
-Route::get('/game/{game}' , 'App\Http\Controllers\GamesController@show');
+//route du detaille du jeu avec l'id
+Route::get('game/{game}' , 'App\Http\Controllers\GamesController@show');
+Route::get('send-email/{game}' , 'App\Http\Controllers\GamesController@sendEmail');
 
 Auth::routes();
 

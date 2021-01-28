@@ -15,7 +15,6 @@
 
 </head>
 
-
 <body>
 
     <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

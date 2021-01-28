@@ -93,7 +93,6 @@ class AdminController extends Controller
             'useremail' => ['required'],
             'userbirthday'=>['required'],
             'useradmin' =>['required'],
-
         ]);
 
         $user = User::create([ 
