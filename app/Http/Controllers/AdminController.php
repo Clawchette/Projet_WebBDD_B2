@@ -100,7 +100,10 @@ class AdminController extends Controller
 
     public function DelGames(){
         DB::table('games')->where('id', request('id'))->delete();
-        return view('Admin/adminGames');
+        $games = Game::all();
+        return view('Admin/adminGames', [
+            'games' => $games,
+        ] );
     }
 
 
