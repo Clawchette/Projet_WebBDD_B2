@@ -10,26 +10,33 @@
         <form class="form-inline">
             <?php if(!auth()->check()): ?>
                 <ul>
-                    <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Inscription</a></button>
+                    <form>
+                        <input type="text" class="search_bar"> 
+                        <button type='submit' class="button_search_bar"><i></i></button>
+                    </form>
 
-                    <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Connexion</a></button>
+                    <a href="" class="btn btn-info">Inscription</a>
 
+                    <a href="" class="btn btn-info">Connexion</a>
+
+                    
                 </ul>
+
             <?php else: ?>
                 <ul>
-                    <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Profil</a></button>
+                    <a href="" class="btn btn-info">Profil</a>
 
                     <!--<?php if(admin): ?>     Si l'utilisateur est un admin...
-                        <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Dashboard</a></button>
+                        <a href="" class="btn btn-info">Dashboard</a>
 
-                        <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Membres</a></button>
+                        <a href="" class="btn btn-info">Membres</a>
 
-                        <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Jeux</a></button>
+                        <a href="/adminGames" class="btn btn-info">Jeux</a>
                         
                     <?php endif; ?>-->
-                    <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Panier</a></button>
+                    <a href="" class="btn btn-info">Panier</a>
 
-                    <button class="btn btn-info" type="button"><a href="" class="no-link-style-white">Sign out</a></button>
+                    <a href="" class="btn btn-info">Déconnexion</a>
 
                 </ul>
             <?php endif; ?>

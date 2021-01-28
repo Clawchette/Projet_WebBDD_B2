@@ -126,13 +126,22 @@ return [
             'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
         ],
 
-        'default' => [
-            'url' => env('REDIS_URL'),
-            'host' => env('REDIS_HOST', '127.0.0.1'),
-            'password' => env('REDIS_PASSWORD', null),
-            'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_DB', '0'),
-        ],
+        'default' => env('DB_CONNECTION','mysql'),
+
+        'mysql'=> [
+            'driver'=>'mysql',
+            'host'=> env('DB_HOST', '127.0.0.1'),
+            'port'=> env('DB_PORT', '3306'),
+            'database'=> env('DB_DATABASE', 'site_games'),
+            'username'=> env('DB_USERNAME', 'root'),
+            'password'=> env('DB_PASSWORD', ''), /* pour une sécurité accrue ;) */
+            'unix_socket'=> env('DB_SOCKET', ''),
+            'charset'=>'utf8',
+            'collation'=>'utf8_general_ci',
+            'prefix'=>'',
+            'strict'=>true,
+            'engine'=>null,
+         ],
 
         'cache' => [
             'url' => env('REDIS_URL'),

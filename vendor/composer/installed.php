@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'v8.5.8',
-    'version' => '8.5.8.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '4e483982ee7d7b61fc6c7969bd74e9c29e7f5be5',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -28,6 +28,24 @@
       array (
       ),
       'reference' => '283a40c901101e66de7061bd359252c013dcc43c',
+    ),
+    'cloudinary-labs/cloudinary-laravel' => 
+    array (
+      'pretty_version' => '1.0.3',
+      'version' => '1.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'dd3c0d679d1d09765827da7fa765e8288a191178',
+    ),
+    'cloudinary/cloudinary_php' => 
+    array (
+      'pretty_version' => '2.0.0-beta7',
+      'version' => '2.0.0.0-beta7',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ade7928ac42b2dfbdafa2c9ab537144610ae6fd2',
     ),
     'cordoval/hamcrest-php' => 
     array (
@@ -440,12 +458,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'v8.5.8',
-      'version' => '8.5.8.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '4e483982ee7d7b61fc6c7969bd74e9c29e7f5be5',
     ),
     'laravel/sail' => 
     array (
@@ -760,8 +778,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 
@@ -959,6 +977,24 @@
       array (
       ),
       'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
+    ),
+    'shrikeh/teapot' => 
+    array (
+      'pretty_version' => 'v1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '879ad8e197b75d0a34afb92e0ec70b75fd5cf171',
+    ),
+    'squizlabs/php_codesniffer' => 
+    array (
+      'pretty_version' => '2.9.2',
+      'version' => '2.9.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2acf168de78487db620ab4bc524135a13cfe6745',
     ),
     'swiftmailer/swiftmailer' => 
     array (

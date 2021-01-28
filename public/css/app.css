@@ -3,6 +3,10 @@ body{
     min-height: 2000px;
 }
 
+.contenu{
+    padding-left: 10px;
+}
+
 .no-link-style{
     text-decoration: none;
 }
@@ -10,13 +14,17 @@ body{
     text-decoration: none;
 }
 
-.no-link-style-white{
-    text-decoration: none;
-    color:white;
+.modif-button{
+    height:30px; 
+    width:30px; 
+    border: solid 1.5px black; 
+    border-radius: 4px; 
+    padding: 2px;
+    transition: 0.8s;
 }
-.no-link-style-white:hover{
-    text-decoration: none;
-    color:white;
+.modif-button:hover{
+    border-color:blue;
+    transition: 0.5s;
 }
 
 footer{
@@ -25,7 +33,6 @@ footer{
     text-align: center;
     width: 100%;
 }
-
 .jeu_photo{
     height: 300px;
     width: 20%;
@@ -33,6 +40,8 @@ footer{
     position: relative;
     display: inline-flex;
     margin: 2%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .principale{
     height: 100%;
@@ -48,4 +57,17 @@ footer{
     width: 10px;
     height: 20px;
 }
+.super{
+    width: 30%;
+    height: 30%;
+    position: relative;
+    display: inline-flex;
+    border: solid black 1px;
+}
+.button_buy{
+    width: 500px;
+    height: 50px;
+}
+
+
 

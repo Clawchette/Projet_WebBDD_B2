@@ -1,0 +1,60 @@
+
+
+<?php $__env->startSection('contenu'); ?>
+
+<h1>Administration des jeux</h1>
+<br>
+
+<?php if($_GET==NULL): ?>
+    <a href="/adminGames?page=addgame" class="btn btn-info">Ajouter un jeu</a>
+    <!-- liste des jeux déjà sur le site qui seront des boutons pour les modifier -->
+<?php elseif($_GET["page"]=="addgame"): ?>
+    <h3 style="padding-left: 20px;">Ajouter un jeu</h3>
+    <br>
+    <form class="" action="/adminGames" method="post" enctype="multipart/form-data">
+
+        <?php echo e(csrf_field()); ?>
+
+        <div class="row">
+            <div class="col form-group" >
+                <label>Nom du jeu :</label><br>
+                <input type="string" name="gamename" placeholder="Nom du jeu...">
+            </div>
+            <div class="col form-group">
+                <label>Photo du jeu :</label>
+                <input type="file" name="gamepic" class="form-control-file">
+            </div>
+            <div class="col form-group">
+                <label>Prix du jeu (en euros) :</label><br>
+                <input type="number" name="gameprice" placeholder="Prix du jeu (en €)...">
+            </div>
+        </div><br>
+
+        <div>
+            <label>Description du jeu :</label><br>
+            <textarea name="gamedesc" style="color:grey;" cols="140">Description du jeu...</textarea>
+        </div><br>
+
+        <div class="row">
+            <div class="col-4 form-group">
+                <label>Nombre de jeux disponibles :</label><br>
+                <input type="number" name="gamestock" placeholder="Quantité en stock...">
+            </div>
+
+            <div class="col-4 form-group">
+                <label>Code d'activation du jeu :</label><br>
+                <input type="number" name="gamecode" placeholder="Code du jeu...">
+            </div>
+        </div><br>
+
+        <div>
+            <input type="submit" value="Valider" class="btn btn-outline-success">
+        </div><br><br>
+    </form>
+<?php endif; ?>
+
+
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Clawc\Documents\B2-informatique\Projet_Web\Projet_WebBDD_B2\resources\views/Admin/adminGames.blade.php ENDPATH**/ ?>
