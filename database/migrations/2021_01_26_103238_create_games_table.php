@@ -17,7 +17,7 @@ class CreateGamesTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->text('photo');
+            $table->text('photo')->default('');
             $table->text('plateform');
             $table->integer('stock');
             $table->float('price');

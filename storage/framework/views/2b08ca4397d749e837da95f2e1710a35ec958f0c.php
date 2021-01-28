@@ -5,56 +5,23 @@
 <h1>Administration des jeux</h1>
 <br>
 
-<?php if($_GET==NULL): ?>
-    <a href="/adminGames?page=addgame" class="btn btn-info">Ajouter un jeu</a>
+    <a href="/adminAddGames" class="btn btn-info" style="margin-bottom:20px;">Ajouter un jeu</a><br>
     <!-- liste des jeux déjà sur le site qui seront des boutons pour les modifier -->
-<?php elseif($_GET["page"]=="addgame"): ?>
-    <h3 style="padding-left: 20px;">Ajouter un jeu</h3>
-    <br>
-    <form class="" action="/adminGames" method="post" enctype="multipart/form-data">
-
-        <?php echo e(csrf_field()); ?>
-
-        <div class="row">
-            <div class="col form-group" >
-                <label>Nom du jeu :</label><br>
-                <input type="string" name="gamename" placeholder="Nom du jeu...">
+    <?php $__currentLoopData = $games; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $game): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <div class="row" style="margin-bottom:20px; border:solid black 2px; border-radius:5px; width: 400px;">
+            <div class="col-5">
+                <img src="<?php echo e($game->photo); ?>" style="height:150px; width:150px;">
             </div>
-            <div class="col form-group">
-                <label>Photo du jeu :</label>
-                <input type="file" name="gamepic" class="form-control-file">
+            <div class="col-3">
+                <h3 style="margin-bottom:20px;"><?php echo e($game->name); ?></h5>
+                <a href="/adminModGames?id=<?php echo e($game->id); ?>" class="btn btn-success" style="margin-bottom:20px;">Modifier</a>
+
+                <form action="/adminGames" method="post">
+                    <input type="hidden" name="id" value="<?php echo e($game->id); ?>">
+                    <input type="submit" value="Supprimer" class="btn btn-danger">
+                </form>
             </div>
-            <div class="col form-group">
-                <label>Prix du jeu (en euros) :</label><br>
-                <input type="number" name="gameprice" placeholder="Prix du jeu (en €)...">
-            </div>
-        </div><br>
-
-        <div>
-            <label>Description du jeu :</label><br>
-            <textarea name="gamedesc" style="color:grey;" cols="140">Description du jeu...</textarea>
-        </div><br>
-
-        <div class="row">
-            <div class="col-4 form-group">
-                <label>Nombre de jeux disponibles :</label><br>
-                <input type="number" name="gamestock" placeholder="Quantité en stock...">
-            </div>
-
-            <div class="col-4 form-group">
-                <label>Code d'activation du jeu :</label><br>
-                <input type="number" name="gamecode" placeholder="Code du jeu...">
-            </div>
-        </div><br>
-
-        <div>
-            <input type="submit" value="Valider" class="btn btn-outline-success">
-        </div><br><br>
-    </form>
-<?php endif; ?>
-
-
-
-
+        </div>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Clawc\Documents\B2-informatique\Projet_Web\Projet_WebBDD_B2\resources\views/Admin/adminGames.blade.php ENDPATH**/ ?>
